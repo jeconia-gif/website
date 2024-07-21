@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribution Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form {
+            margin-bottom: 20px;
+        }
+
+        .form h2 {
+            margin-bottom: 10px;
+        }
+
+        .form input[type="text"],
+        .form input[type="password"],
+        .form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contribution Tracker</h1>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- Add Member Form -->
+        <div id="addMemberForm" class="form">
+            <h2>Add Member</h2>
+            <input type="text" id="memberName" placeholder="Member Name" required>
+            <button onclick="addMember()">Add Member</button>
+        </div>
+
+        <!-- Record Contribution Form -->
+        <div id="recordContributionForm" class="form">
+            <h2>Record Contribution</h2>
+            <select id="contributor" required>
+                <option value="">Select Member</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+            <input type="number" id="contributionAmount" placeholder="Contribution Amount" min="0" required>
+            <button onclick="recordContribution()">Record Contribution</button>
+        </div>
+    </div>
+
+    <script>
+        // Dummy functions for demonstration purposes
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            console.log('Username:', username);
+            console.log('Password:', password);
+            // Simulated successful login
+            alert('Login successful');
+        }
+
+        function addMember() {
+            var memberName = document.getElementById('memberName').value;
+            console.log('Member Name:', memberName);
+            // Simulated adding member
+            alert('Member added successfully');
+        }
+
+        function recordContribution() {
+            var contributor = document.getElementById('contributor').value;
+            var contributionAmount = document.getElementById('contributionAmount').value;
+            console.log('Contributor:', contributor);
+            console.log('Contribution Amount:', contributionAmount);
+            // Simulated recording contribution
+            alert('Contribution recorded successfully');
+        }
+    </script>
+</body>
+</html>
